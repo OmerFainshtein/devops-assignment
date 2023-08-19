@@ -1,83 +1,52 @@
 pipeline {
     agent any
-
+    
     stages {
+        stage('Pre-requisites') {
+            steps {
+                script {
+                    sh 'python3 -m venv venv'
+                    sh '. venv/bin/activate && pip install -r requirements.txt'
+                }
+            }
+        }
+        
         stage('Build') {
             steps {
                 script {
-                    docker.image('python:3.9').inside {
-                        sh 'pip install --no-cache-dir -r requirements.txt'
-                    }
+                    sh 'docker build -t devops-assignment .'
                 }
             }
         }
-
+        
         stage('Test') {
             steps {
                 script {
-                    docker.image('python:3.9').inside {
-                        sh 'pip install --no-cache-dir -r requirements.txt'
-                        sh 'pip install requests'
-                        sh 'pytest test_main.py'
-                    }
+                    sh 'pytest'
                 }
             }
         }
-
+        
         stage('Deploy') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.example.com', 'docker-credentials-id') {
-                        sh 'docker-compose up -d'
-                    }
+                    sh 'docker run -p 8000:8000 devops-assignment'
+                }
+            }
+        }
+        
+        stage('Cleanup') {
+            steps {
+                script {
+                    sh 'rm -rf venv'
                 }
             }
         }
     }
-}
-
-
-//after changes:
-
-
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                script {
-                    docker.image('python:3.9').inside {
-                        sh 'docker build -t devops-assignment .'
-                        sh 'apt-get update && apt-get install -y python3-pip'
-                        sh 'pip install --no-cache-dir -r requirements.txt'
-                    }
-                }
-            }
-        }
-
-        stage('Test') {
-            steps {
-                script {
-                    docker.image('python:3.9').inside {
-                        sh 'apt-get update && apt-get install -y python3-pip'
-                        sh 'pip install --no-cache-dir -r requirements.txt'
-                        sh 'pip install pytest requests aiofiles'
-                        sh 'pytest'
-                    }
-                }
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                script {
-                    docker.withRegistry('https://registry.example.com', 'docker-credentials-id') {
-                        sh 'docker run devops-assignment'
-                    }
-                }
-            }
+    
+    post {
+        always {
+            sh 'docker rm -f $(docker ps -aq)'
         }
     }
 }
-
