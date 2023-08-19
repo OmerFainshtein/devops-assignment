@@ -2,7 +2,7 @@
 # General notes
 This repository contains a comprehensive Continuous Integration (CI) process using Jenkins, Docker, and Docker-compose. The CI process is set up to run a simple web app. Please note that this program is designed to run specifically on a Linux environment.
 
-# Instructions
+## Instructions
 Follow these steps to set up and run the CI process and the web app:
 
 # Clone the Repository:
