@@ -1,6 +1,6 @@
 # devops-assignment
 
-This repository contains a comprehensive Continuous Integration (CI) process using Jenkins, Docker, and Docker-compose. The CI process is set up to run a web app. Please note that this program is designed to run specifically on a Linux environment.
+This repository contains a Continuous Integration (CI) process using Jenkins, Docker, and Docker-compose. The CI process is set up to run a web app. Please note that this program is designed to run specifically on a Linux environment.
 
 ## Instructions
 Follow these steps to set up and run the CI process and the web app:
@@ -30,17 +30,16 @@ cd <repository_directory>
 * Choose a name for the new item.
 * Select "Pipeline" as the project type and click "OK."
 
-* Configure Pipeline Script:
+### Configure Pipeline Script:
 * Scroll down to the "Pipeline" section.
 * Change the pipeline definition to "Pipeline script from SCM."
 * Choose "Git" as the SCM.
 * Paste the URL of this Git repository in the "Repository URL" field.
 
 * In the "Branch specifier" field, enter */main to specify the main branch.
-* Specify Pipeline Script Path:
+### Specify Pipeline Script Path:
 
-* In the "Script Path" field, enter pipeline/Jenkinsfile as the path to the Jenkins pipeline script.
-* Apply and Save Configuration:
+* In the "Script Path" field, enter pipeline/Jenkinsfile.
 
 * Click "Apply" and "save".
 
