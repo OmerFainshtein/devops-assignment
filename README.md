@@ -47,6 +47,3 @@ cd <repository_directory>
 
 ### Access the Web App
 Open a new browser tab and navigate to http://localhost:8000 to access the simple web app that is being served.
-
-
-## Please note that this setup assumes you have Docker, Docker-compose, and Jenkins installed on your Linux environment. Following these instructions should guide you through setting up the CI process and running the web app locally. If you encounter any issues, refer to relevant documentation or troubleshoot based on the specific error messages.
