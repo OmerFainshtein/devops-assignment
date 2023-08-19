@@ -8,7 +8,7 @@ services:
       - "8080:8080"
     environment:
       JAVA_OPTS: "-Djenkins.install.runSetupWizard=false" # Disable initial setup wizard
-      JENKINS_USER: gues
+      JENKINS_USER: guest
       JENKINS_PASS: Aa12345678
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
