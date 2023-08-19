@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0e1a; /* Solid dark background color */
+    color: #ffffff; /* Text color for better contrast */
+}
+
+.text-container {
+    padding: 20px;
+    text-align: center;
+}
+
+#hello {
+    text-align: left;
+    font-size: 200px;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+#world {
+    text-align: left;
+    font-size: 125px;
+    margin-top: -210px;
+    margin-left: 350px;
+    color: #706c6c;
+}

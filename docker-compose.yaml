@@ -1,0 +1,22 @@
+version: '3'
+services:
+  jenkins:
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      JAVA_OPTS: "-Djenkins.install.runSetupWizard=false" # Disable initial setup wizard
+      JENKINS_USER: omer
+      JENKINS_PASS: Aa12345678
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jenkins_home:/var/jenkins_home
+      - ./pipeline/Jenkinsfile:/var/jenkins_home/pipeline/Jenkinsfile # Mount your Jenkinsfile
+
+
+volumes:
+  jenkins_home:
+
+
