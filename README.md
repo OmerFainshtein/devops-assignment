@@ -5,7 +5,7 @@ This repository contains a comprehensive Continuous Integration (CI) process usi
 ## Instructions
 Follow these steps to set up and run the CI process and the web app:
 
-## Clone the Repository:
+### Clone the Repository:
 Clone this repository to your local machine using the following command:
 
 ### Copy code
@@ -13,27 +13,27 @@ git clone <repository_url>
 Navigate to Repository:
 In your terminal, change your working directory to the repository you just downloaded:
 
-# Copy code
+### Copy code
 cd <repository_directory>
 Build and Run Docker Compose:
 Run the following command to build and start the Docker containers defined in the docker-compose.yml file:
 
-# Copy code
+### Copy code
 sudo docker-compose up --build
 Access the Web App:
 Open a web browser and navigate to http://localhost:8080 to access the Jenkins interface.
 
-# Log in to Jenkins:
+### Log in to Jenkins:
 Log in to Jenkins using the following credentials:
 Username: guest
 Password: Aa12345678
 
-# Create a New Jenkins Item:
+### Create a New Jenkins Item:
 In the Jenkins dashboard, click on "New Item" to create a new project.
 
-# Configure the Pipeline:
+## Configure the Pipeline:
 
-Choose a suitable name for the new item.
+Choose a name for the new item.
 Select "Pipeline" as the project type and click "OK."
 Configure Pipeline Script:
 
@@ -60,4 +60,4 @@ Access the Web App (Again):
 
 Open a new browser tab and navigate to http://localhost:8000 to access the simple web app that is being served.
 
-Please note that this setup assumes you have Docker, Docker-compose, and Jenkins installed on your Linux environment. Following these instructions should guide you through setting up the CI process and running the web app locally. If you encounter any issues, refer to relevant documentation or troubleshoot based on the specific error messages.
+## Please note that this setup assumes you have Docker, Docker-compose, and Jenkins installed on your Linux environment. Following these instructions should guide you through setting up the CI process and running the web app locally. If you encounter any issues, refer to relevant documentation or troubleshoot based on the specific error messages.
