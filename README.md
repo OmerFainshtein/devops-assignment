@@ -1,14 +1,14 @@
 # devops-assignment
-# General notes
+## General notes
 This repository contains a comprehensive Continuous Integration (CI) process using Jenkins, Docker, and Docker-compose. The CI process is set up to run a simple web app. Please note that this program is designed to run specifically on a Linux environment.
 
 ## Instructions
 Follow these steps to set up and run the CI process and the web app:
 
-# Clone the Repository:
+## Clone the Repository:
 Clone this repository to your local machine using the following command:
 
-# Copy code
+### Copy code
 git clone <repository_url>
 Navigate to Repository:
 In your terminal, change your working directory to the repository you just downloaded:
