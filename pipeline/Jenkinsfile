@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'docker run -p 8000:8000 devops-assignment'
+                    sh 'docker run -p -d 8000:8000 devops-assignment'
                 }
             }
         }
