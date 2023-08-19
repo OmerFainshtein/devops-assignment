@@ -5,7 +5,7 @@ This repository contains a comprehensive Continuous Integration (CI) process usi
 ## Instructions
 Follow these steps to set up and run the CI process and the web app:
 
-### Clone the Repository:
+* ### Clone the Repository:
 Clone this repository to your local machine using the following command:
 
 ### Copy code
