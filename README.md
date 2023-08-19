@@ -46,4 +46,4 @@ cd <repository_directory>
 * Click on "Build Now" to initiate the Jenkins pipeline build process.
 
 ### Access the Web App
-Open a new browser tab and navigate to http://localhost:8000 to access the simple web app that is being served.
+* Open a new browser tab and navigate to http://localhost:8000 to access the simple web app that is being served.
