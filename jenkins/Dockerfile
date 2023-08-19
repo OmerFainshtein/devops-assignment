@@ -8,7 +8,7 @@ RUN add-apt-repository \
    $(lsb_release -cs) \
    stable"
 RUN apt-get update  -qq \
-    && apt-get -y install docker-ce python3-venv python3-pip
+    && apt-get -y install docker-ce python3-venv python3-pip python3-venv
 RUN usermod -aG docker jenkins
 
 # Install necessary plugins listed in plugins.txt

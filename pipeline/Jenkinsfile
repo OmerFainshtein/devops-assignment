@@ -5,7 +5,7 @@ pipeline {
         stage('Pre-requisites') {
             steps {
                 script {
-                    sh 'pip install -r requirements.txt'
+                    sh 'python3 -m venv venv && . venv/bin/activate && pip install -r requirements.txt'
                 }
             }
         }
@@ -30,9 +30,17 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'pytest'
+                    sh '. venv/bin/activate && pytest'
                 }
             }
         }
+        stage('Cleanup') {
+            steps {
+                script {
+                    sh 'rm -rf venv'
+                }
+            }
+        }
+
     }
 }
