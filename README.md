@@ -1,6 +1,6 @@
 # devops-assignment
 
-This repository contains a comprehensive Continuous Integration (CI) process using Jenkins, Docker, and Docker-compose. The CI process is set up to run a simple web app. Please note that this program is designed to run specifically on a Linux environment.
+This repository contains a comprehensive Continuous Integration (CI) process using Jenkins, Docker, and Docker-compose. The CI process is set up to run a web app. Please note that this program is designed to run specifically on a Linux environment.
 
 ## Instructions
 Follow these steps to set up and run the CI process and the web app:
@@ -13,7 +13,7 @@ git clone <repository_url>
 cd <repository_directory>
 
 ### Build and Run Docker Compose:
-* run: sudo docker-compose up --build
+* run: sudo docker-compose up 
 
 * Open a web browser and navigate to http://localhost:8080 to access the Jenkins interface.
 
