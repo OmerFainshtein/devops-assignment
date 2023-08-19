@@ -13,37 +13,36 @@ git clone <repository_url>
 cd <repository_directory>
 
 ### Build and Run Docker Compose:
-sudo docker-compose up --build
+* run: sudo docker-compose up --build
 
-* Access the Web App:
-Open a web browser and navigate to http://localhost:8080 to access the Jenkins interface.
+* Open a web browser and navigate to http://localhost:8080 to access the Jenkins interface.
 
 ### Log in to Jenkins:
-Log in to Jenkins using the following credentials:
-Username: guest
-Password: Aa12345678
+* Log in to Jenkins using the following credentials:
+* Username: guest
+* Password: Aa12345678
 
 ### Create a New Jenkins Item:
-In the Jenkins dashboard, click on "New Item" to create a new project.
+* In the Jenkins dashboard, click on "New Item" to create a new project.
 
 ## Configure the Pipeline:
 
-Choose a name for the new item.
-Select "Pipeline" as the project type and click "OK."
+* Choose a name for the new item.
+* Select "Pipeline" as the project type and click "OK."
 
 * Configure Pipeline Script:
-Scroll down to the "Pipeline" section.
-Change the pipeline definition to "Pipeline script from SCM."
-Choose "Git" as the SCM.
-Paste the URL of this Git repository in the "Repository URL" field.
+* Scroll down to the "Pipeline" section.
+* Change the pipeline definition to "Pipeline script from SCM."
+* Choose "Git" as the SCM.
+* Paste the URL of this Git repository in the "Repository URL" field.
 
 * In the "Branch specifier" field, enter */main to specify the main branch.
-Specify Pipeline Script Path:
+* Specify Pipeline Script Path:
 
 * In the "Script Path" field, enter pipeline/Jenkinsfile as the path to the Jenkins pipeline script.
-Apply and Save Configuration:
+* Apply and Save Configuration:
 
-Click "Apply" and "save".
+* Click "Apply" and "save".
 
 * Click on "Build Now" to initiate the Jenkins pipeline build process.
 
