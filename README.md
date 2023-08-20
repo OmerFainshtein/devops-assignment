@@ -6,7 +6,7 @@ This repository contains a Continuous Integration (CI) process using Jenkins, Do
 Follow these steps to set up and run the CI process and the web app:
 
 ### Clone the Repository:
-* Clone this repository to your local machine using the following command:
+* Clone this repository to your local machine using *https* clone:
 git clone <repository_url>
 
 * In your terminal, change your working directory to the repository you just downloaded:
