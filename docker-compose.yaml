@@ -13,8 +13,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins_home:/var/jenkins_home
-      - ./pipeline/Jenkinsfile:/var/jenkins_home/pipeline/Jenkinsfile # Mount your Jenkinsfile
-
 
 volumes:
   jenkins_home:
